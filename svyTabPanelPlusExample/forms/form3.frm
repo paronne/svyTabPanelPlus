@@ -1,0 +1,22 @@
+customProperties:"formComponent:false",
+encapsulation:60,
+items:[
+{
+location:"134,108",
+size:"90,30",
+text:"Form 3",
+transparent:true,
+typeid:7,
+uuid:"40270611-B4EE-4C9F-AA36-94AA906D7AF3"
+},
+{
+height:480,
+partType:5,
+typeid:19,
+uuid:"5702FE33-66CC-4E57-ACD6-583832101541"
+}
+],
+name:"form3",
+showInMenu:true,
+typeid:3,
+uuid:"35B8AC4D-1159-47A0-A1CF-73D4D3724968"
