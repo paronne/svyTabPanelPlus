@@ -1,0 +1,12 @@
+{
+    "name":"tabpanelplus",
+    "displayName":"Enhanced TabPanel for Servoy",
+    "packageType": "Web-Component",
+    "icon": "",
+    "description": "A tablpanel with advanced features like 'x' close button",
+    "wikiUrl": "https://github.com/Servoy/svyTabPanelPlus/wiki",
+    "sourceUrl" : "https://github.com/Servoy/svyTabPanelPlus",
+    "releases" : [{
+    	"version":"0.1.0",
+    	"url":"https://github.com/Servoy/svyPDFViewer/releases/download/v0.1.0/pdfviewer.zip"}]
+}
