@@ -8,6 +8,16 @@ typeid:19,
 uuid:"87AAE3E3-89FF-4F7E-8276-9A8192F6C5F6"
 },
 {
+location:"460,50",
+onActionMethodID:"29C338A8-8855-454D-BDA7-00E6E2F3D544",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"140,30",
+text:"Reload Tabs",
+typeid:7,
+uuid:"9C018205-1E36-4425-A26C-6D116DAC2B46"
+},
+{
 json:{
 location:{
 x:30,
@@ -34,6 +44,7 @@ text:"Form 2"
 {
 containsFormId:"35B8AC4D-1159-47A0-A1CF-73D4D3724968",
 name:"form3",
+showCloseIcon:true,
 svyUUID:"964FFAD2-2DA9-4D0B-84A7-4FC1BE8C9248",
 text:"Form 3"
 }
