@@ -80,6 +80,7 @@ $scope.api.removeAllTabs = function() {
 }
 
 $scope.api.getMaxTabIndex = function() {
+	if (!$scope.model.tabs) $scope.model.tabs = [];
 	return $scope.model.tabs.length;
 }
 
