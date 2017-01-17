@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-SymbolicName: tabpanelplus
 Bundle-Name: TabPanel Plus
-Bundle-Version: 1.0.0-beta.1
+Bundle-Version: 1.0.0-beta.2
 Package-Type: Web-Component
 
 Name: tabpanel/tabpanel.spec
