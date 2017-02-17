@@ -7,6 +7,6 @@ Contains all the same functionality and API, with the ability to close tabs with
 Enhanccements planned for the future:
 * Draggable tabs
 * Overflow handler for many tabs
-* Plus buttn ??
+* Plus button ??
 
 NOTE: This is still in **pre-release**
