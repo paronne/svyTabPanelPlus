@@ -19,12 +19,12 @@
 	        "selectedTabColor" : "color", 
 	        "size" : {"type" :"dimension",  "default" : {"width":300, "height":300}}, 
 	        "styleClass" : { "type" :"styleclass", "tags": { "scope" :"design" }, "values" :[]}, 
-	        "tabIndex" : { "type": "object", "pushToServer": "shallow" }, 
+	        "tabIndex" : { "type": "object", "pushToServer" : "deep" }, 
 	        "tabOrientation" : {"type" :"int", "tags": { "scope" :"design" }, "default":1, "values" :[{"default" :1}, {"TOP":1}, {"HIDE":-1}]}, 
 	        "tabSeq" : {"type" :"tabseq", "tags": { "scope" :"design" }}, 
 	        "tabs" : {"type":"tab[]", "pushToServer": "deep", "droppable":true}, 
 	        "transparent" : "boolean", 
-	        "visible" : "visible" 
+	        "visible" : "visible"
 	},
 	"handlers":
 	{

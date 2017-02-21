@@ -1,24 +1,10 @@
-
-angular.module('tabpanelplusTabpanel',['servoy']).directive('tabpanelplusTabpanel', function() {  
-    return {
-      restrict: 'E',
-      scope: {
-    	  model: '=svyModel'
-      },
-      controller: function($scope, $element, $attrs) {
-      },
-      templateUrl: 'tabpanelplus/tabpanel/tabpanel.html'
-    };
-  })
-  
-  
 angular.module('tabpanelplusTabpanel',['servoy']).directive('tabpanelplusTabpanel', function($window, $log, $apifunctions,$timeout,$anchorConstants) {  
 	return {
 		restrict: 'E',
 		transclude: true,
 		scope: {
 			model: "=svyModel",
-			svyServoyapi: "=",
+			svyServoyapi: "=svyServoyapi",
 			handlers: "=svyHandlers",
 			api: "=svyApi"
 		},
@@ -98,7 +84,12 @@ angular.module('tabpanelplusTabpanel',['servoy']).directive('tabpanelplusTabpane
 			$scope.$watch("model.tabs", function(newValue) {
 				if ($log.debugEnabled) $log.debug("svy * model.tabs reference updated; length = " + ($scope.model.tabs ? $scope.model.tabs.length : undefined) + " -- " + new Date().getTime());
 				refresh();
-			});        
+			});  
+			
+			$scope.$watch("model.selectedTab", function(newValue) {
+//				if ($log.debugEnabled) $log.debug("svy * model.tabs reference updated; length = " + ($scope.model.tabs ? $scope.model.tabs.length : undefined) + " -- " + new Date().getTime());
+//				refresh();
+			});  
 
 			$scope.getTemplateUrl = function() {
 				return "tabpanelplus/tabpanel/tabpanel.html";
@@ -254,17 +245,29 @@ angular.module('tabpanelplusTabpanel',['servoy']).directive('tabpanelplusTabpane
 		   	 * @return {Boolean} a value indicating if tab was successfully removed
 		   	 */
 			$scope.api.removeTabAt = function(index) {
+				
 				if(index > 0 && index <= $scope.model.tabs.length) {
 					for(var i = index - 1; i < $scope.model.tabs.length - 1; i++) {
 						$scope.model.tabs[i] = $scope.model.tabs[i + 1];
 					}
 					$scope.model.tabs.length = $scope.model.tabs.length - 1;
 
-					if(!$scope.getTabAt($scope.model.tabIndex)){
-						$scope.model.tabIndex = Math.min($scope.model.tabs.length, index);
+					var selectedIndex = $scope.model.tabs.indexOf($scope.model.selectedTab);
+					if(selectedIndex != -1){
+						$scope.model.tabIndex = selectedIndex + 1;
+						
+					} else{
+						var selected = $scope.model.tabs[$scope.model.tabIndex-1];
+						if(selected){
+//							$scope.model.selectedTab = selected;
+//							$scope.select(selected);
+//							refresh();
+							// FIXME: Cannot get selected tab to update
+							selected.active = true;
+						} else {
+							$scope.model.tabIndex = Math.min($scope.model.tabs.length, index);
+						}
 					}
-					
-					refresh();
 					return true;
 				}
 				return false;
