@@ -1,6 +1,6 @@
 # TabpanelPlus
+
 Enhanced tabpanel component for NG Client
----
 Currently a simple fork from the default TabPanel component.
 Contains all the same functionality and API, with the ability to close tabs with an 'x' icon
 Other enhancements are planned.
