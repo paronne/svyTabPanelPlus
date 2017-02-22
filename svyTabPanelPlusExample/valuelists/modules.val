@@ -1,0 +1,11 @@
+addEmptyValue:1,
+customValues:"Customers|customerDetail\r\
+Employees|employeeDetail\r\
+Products|productDetail\r\
+Orders|orderDetail\r\
+Shippers|shipperDetail\r\
+Suppliers|supplierDetail\r\
+",
+name:"modules",
+typeid:34,
+uuid:"389B7877-6D76-46E1-B245-A6A6ED30FCA2"

@@ -2,57 +2,75 @@ customProperties:"formComponent:false",
 encapsulation:60,
 items:[
 {
+anchors:3,
+location:"570,60",
+onActionMethodID:"10A508E9-F8D0-44D6-9DFD-0EB5FD2E59F3",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"40,30",
+styleClass:"font-icon large",
+text:"<span class=\"fa fa-times-circle\"/>",
+toolTipText:"Remove all modules",
+typeid:7,
+uuid:"7F7EE8BC-BB91-49EB-8E93-474D12D43BAE"
+},
+{
 height:480,
 partType:5,
 typeid:19,
 uuid:"87AAE3E3-89FF-4F7E-8276-9A8192F6C5F6"
 },
 {
-location:"460,50",
-onActionMethodID:"29C338A8-8855-454D-BDA7-00E6E2F3D544",
-onDoubleClickMethodID:"-1",
-onRightClickMethodID:"-1",
-size:"140,30",
-text:"Reload Tabs",
-typeid:7,
-uuid:"9C018205-1E36-4425-A26C-6D116DAC2B46"
+anchors:3,
+dataProviderID:"selectModule",
+location:"390,15",
+name:"selectModule",
+onDataChangeMethodID:"D2502D00-02FB-4866-B86A-79F8421ADF2A",
+placeholderText:"Select a module to load.",
+size:"220,30",
+typeid:4,
+uuid:"C7CE573D-1B36-47D9-8490-8FD24AE7F46F",
+valuelistID:"389B7877-6D76-46E1-B245-A6A6ED30FCA2"
 },
 {
+anchors:3,
+location:"530,60",
+onActionMethodID:"3B570D28-F471-421C-B8E7-B0886AA17005",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"40,30",
+styleClass:"font-icon large",
+text:"<span class=\"fa fa-plus-circle\"/>",
+toolTipText:"Add all modules",
+typeid:7,
+uuid:"D6CB2B05-61D6-402B-9E33-95F92BD61D47"
+},
+{
+anchors:15,
 json:{
+anchors:15,
 location:{
-x:30,
-y:50
+x:20,
+y:60
 },
 size:{
 height:390,
-width:570
+width:590
 },
 tabs:[
 {
-containsFormId:"D001C115-CA59-4ACE-B6B3-515AE6A2872D",
-name:"tab0",
-svyUUID:"173EA394-763D-4C8C-A167-A4C90B13B631",
-text:"Form 1"
-},
-{
-containsFormId:"E5553FFC-3CBA-4957-AC1C-8ADB3FF4FBE7",
-name:"form2",
-showCloseIcon:true,
-svyUUID:"60A71E39-EAFE-490A-873D-2E914F564D09",
-text:"Form 2"
-},
-{
-containsFormId:"35B8AC4D-1159-47A0-A1CF-73D4D3724968",
-name:"form3",
-showCloseIcon:true,
-svyUUID:"964FFAD2-2DA9-4D0B-84A7-4FC1BE8C9248",
-text:"Form 3"
+containsFormId:"BCF8DEC1-37EF-4DF1-A5D5-F8EDF6C97836",
+name:"welcomeTab",
+svyUUID:"9E0EBCE6-ECB0-4C29-B1DF-8FE9DC370363",
+text:"Welcome"
 }
 ]
 },
-location:"30,50",
+location:"20,60",
 name:"tabs",
-size:"570,390",
+size:"590,390",
 typeName:"tabpanelplus-tabpanel",
 typeid:47,
 uuid:"DC963887-1DC5-435D-AD54-73C255F44708"

@@ -1,0 +1,14 @@
+customProperties:"formComponent:false",
+encapsulation:60,
+items:[
+{
+height:480,
+partType:5,
+typeid:19,
+uuid:"BE384E03-FF59-4E8A-893B-D52E81C5AEBA"
+}
+],
+name:"tabChooser",
+showInMenu:true,
+typeid:3,
+uuid:"F9A87251-D7C4-4EFF-9933-2BD867C4550F"
