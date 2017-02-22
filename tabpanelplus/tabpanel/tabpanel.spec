@@ -49,7 +49,7 @@
 				"parameters":[
 								{                                                                 
  								"name":"form/formname",
-								"type":"object []"
+								"type":"object"
 			                	},
              					{                                                                 
  								"name":"name",
@@ -194,7 +194,7 @@
 	        	"parameters" : [
 	        					{
 	        					"name":"form/formname",
-	        					"type":"object []"
+	        					"type":"object"
 	        					}
 	        				],
 	        	"returns" : "int"
