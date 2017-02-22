@@ -97,7 +97,15 @@ $scope.api.getTabFGColorAt = function(index) {
 	var tab = $scope.getTabAt(index);
 	return tab ? tab.foreground : '';
 }
-
+$scope.api.indexOf = function(form){
+	var formName = form instanceof String ? form : form._formname_;
+	for (var i = 0; i < $scope.model.tabs.length; i++) {
+		if($scope.model.tabs[i].containsFormId === formName){
+			return i + 1;
+		}
+	}
+	return -1;
+}
 $scope.api.getTabFormNameAt = function(index) {
 	var tab = $scope.getTabAt(index);
 	return tab ? tab.containsFormId : '';

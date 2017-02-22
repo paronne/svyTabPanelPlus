@@ -190,6 +190,15 @@
 	        "getWidth": {
 	            "returns": "int"
 	        },
+	        "indexOf" : {
+	        	"parameters" : [
+	        					{
+	        					"name":"form/formname",
+	        					"type":"object []"
+	        					}
+	        				],
+	        	"returns" : "int"
+	        },
 	        "isTabEnabled": {
 	            "returns": "boolean",
 				"parameters":[
