@@ -3,6 +3,7 @@ encapsulation:60,
 items:[
 {
 anchors:3,
+formIndex:2,
 location:"570,60",
 onActionMethodID:"10A508E9-F8D0-44D6-9DFD-0EB5FD2E59F3",
 rolloverCursor:12,
@@ -35,6 +36,7 @@ valuelistID:"389B7877-6D76-46E1-B245-A6A6ED30FCA2"
 },
 {
 anchors:3,
+formIndex:1,
 location:"530,60",
 onActionMethodID:"3B570D28-F471-421C-B8E7-B0886AA17005",
 rolloverCursor:12,
@@ -52,8 +54,8 @@ anchors:15,
 json:{
 anchors:15,
 location:{
-x:20,
-y:60
+x:30,
+y:59
 },
 size:{
 height:390,
@@ -65,10 +67,16 @@ containsFormId:"BCF8DEC1-37EF-4DF1-A5D5-F8EDF6C97836",
 name:"welcomeTab",
 svyUUID:"9E0EBCE6-ECB0-4C29-B1DF-8FE9DC370363",
 text:"Welcome"
+},
+{
+containsFormId:"2892162A-1216-4ED0-9895-FDCE9D5B40E9",
+showCloseIcon:true,
+svyUUID:"4864D624-5CFA-47F9-BC35-F42A001F3299",
+text:"Customer"
 }
 ]
 },
-location:"20,60",
+location:"30,59",
 name:"tabs",
 size:"590,390",
 typeName:"tabpanelplus-tabpanel",
