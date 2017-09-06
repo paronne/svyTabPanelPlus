@@ -1,10 +1,11 @@
 {
-	"name": "tabpanelplus-tabpanel",
-	"displayName": "Tab Panel Plus",
+    "name": "tabpanelplus-tabpanel",
+    "displayName": "Tab Panel Plus",
 	"version": 1,
-	"definition": "tabpanelplus/tabpanel/tabpanel.js",
-	"serverscript": "tabpanelplus/tabpanel/tabpanel_server.js",
-    "libraries": [{"name":"tabpanel", "version":"1", "url":"tabpanelplus/tabpanel/tabpanel.css", "mimetype":"text/css"}],
+	"icon": "tabpanelplus/tabpanel/tab.png",
+    "definition": "tabpanelplus/tabpanel/tabpanel.js",
+    "serverscript": "tabpanelplus/tabpanel/tabpanel_server.js",
+	"libraries": [{"name":"accordionpanel", "version":"1", "url":"tabpanelplus/tabpanel/accordionpanel.css", "mimetype":"text/css"}],
 	"model":
 	{
 	        "background" : "color", 
@@ -19,12 +20,12 @@
 	        "selectedTabColor" : "color", 
 	        "size" : {"type" :"dimension",  "default" : {"width":300, "height":300}}, 
 	        "styleClass" : { "type" :"styleclass", "tags": { "scope" :"design" }, "values" :[]}, 
-	        "tabIndex" : { "type": "object", "pushToServer" : "deep" }, 
-	        "tabOrientation" : {"type" :"int", "tags": { "scope" :"design" }, "default":1, "values" :[{"default" :1}, {"TOP":1}, {"HIDE":-1}]}, 
+	        "tabIndex" : { "type": "object", "pushToServer": "shallow" }, 
 	        "tabSeq" : {"type" :"tabseq", "tags": { "scope" :"design" }}, 
 	        "tabs" : {"type":"tab[]", "pushToServer": "shallow", "droppable":true}, 
 	        "transparent" : "boolean", 
-	        "visible" : "visible"
+	        "visible" : "visible",
+			"activeTabIndex": { "type": "int", "default": 0, "tags": { "scope": "private" }, "pushToServer": "shallow" }
 	},
 	"handlers":
 	{
@@ -33,7 +34,7 @@
 	        	"parameters":[
 								{
 						          "name":"previousIndex",
-								  "type":"Number"
+								  "type":"int"
 								}, 
 								{
 						          "name":"event",
@@ -49,7 +50,7 @@
 				"parameters":[
 								{                                                                 
  								"name":"form/formname",
-								"type":"object"
+								"type":"object []"
 			                	},
              					{                                                                 
  								"name":"name",
@@ -89,11 +90,6 @@
              					{                                                                 
  								"name":"index",
 								"type":"object",
-			            		"optional":true
-			            		},
-			            		{
-			            		"name":"showCloseIcon",
-			            		"type":"boolean",
 			            		"optional":true
 			            		}             
 							 ]
@@ -322,7 +318,8 @@
   		"disabled": "boolean",
   		"imageMediaID": "media",
   		"mnemonic": "string",
-  		"showCloseIcon" : "boolean"
+  		"showCloseIcon": "boolean",
+		"isActive": { "type": "boolean", "default": false, "tags": { "scope": "private" }, "pushToServer": "shallow" }
   	}
 }
 	 
